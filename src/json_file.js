@@ -1,0 +1,100 @@
+import {
+    ROAD_CROSS_X,
+    ROAD_CROSS_T_TO_UP,
+    ROAD_CROSS_T_TO_RIGHT,
+    ROAD_CROSS_T_TO_DOWN,
+    ROAD_CROSS_T_TO_LEFT,
+    ROAD_UP_TO_RIGHT,
+    //ROAD_UP_TO_LEFT,
+    //ROAD_RIGHT_TO_UP,
+    ROAD_RIGHT_TO_DOWN,
+    //ROAD_DOWN_TO_RIGHT,
+    //ROAD_DOWN_TO_LEFT,
+    ROAD_LEFT_TO_UP,
+    ROAD_LEFT_TO_DOWN,
+    ROAD_HORIZONTAL,
+    ROAD_VERTICAL,
+
+    STREET_DALLE,
+    STREET_GRASS,
+
+    BUILD,
+    BUILD_GAME,
+
+    TREE_1,
+    TREE_2
+
+} from './const.js';
+
+const MY_JSON = {
+    map_of_lvl: [
+        [STREET_DALLE, STREET_DALLE, STREET_DALLE, STREET_GRASS, STREET_GRASS, STREET_DALLE, STREET_DALLE, STREET_DALLE, STREET_DALLE, STREET_DALLE],
+        [STREET_DALLE, ROAD_RIGHT_TO_DOWN, ROAD_HORIZONTAL, ROAD_HORIZONTAL, ROAD_CROSS_T_TO_DOWN, ROAD_HORIZONTAL, ROAD_HORIZONTAL, ROAD_HORIZONTAL, ROAD_LEFT_TO_DOWN, STREET_DALLE],
+        [STREET_DALLE, ROAD_VERTICAL, STREET_DALLE, STREET_DALLE, ROAD_VERTICAL, STREET_DALLE, STREET_GRASS, STREET_GRASS, ROAD_VERTICAL, STREET_DALLE],
+        [STREET_DALLE, ROAD_VERTICAL, STREET_DALLE, STREET_DALLE, ROAD_VERTICAL, STREET_DALLE, STREET_GRASS, STREET_GRASS, ROAD_VERTICAL, STREET_DALLE],
+        [STREET_DALLE, ROAD_CROSS_T_TO_RIGHT, ROAD_HORIZONTAL, ROAD_HORIZONTAL, ROAD_CROSS_X, ROAD_HORIZONTAL, ROAD_HORIZONTAL, ROAD_HORIZONTAL, ROAD_CROSS_T_TO_LEFT, STREET_DALLE],
+        [STREET_DALLE, ROAD_VERTICAL, STREET_DALLE, STREET_DALLE, ROAD_VERTICAL, STREET_DALLE, STREET_DALLE, STREET_DALLE, ROAD_VERTICAL, STREET_DALLE],
+        [STREET_DALLE, ROAD_VERTICAL, STREET_DALLE, STREET_DALLE, ROAD_VERTICAL, STREET_DALLE, STREET_DALLE, STREET_DALLE, ROAD_VERTICAL, STREET_DALLE],
+        [STREET_DALLE, ROAD_VERTICAL, STREET_DALLE, STREET_DALLE, ROAD_VERTICAL, STREET_DALLE, STREET_DALLE, STREET_DALLE, ROAD_VERTICAL, STREET_DALLE],
+        [STREET_DALLE, ROAD_UP_TO_RIGHT, ROAD_HORIZONTAL, ROAD_HORIZONTAL, ROAD_CROSS_T_TO_UP, ROAD_HORIZONTAL, ROAD_HORIZONTAL, ROAD_HORIZONTAL, ROAD_LEFT_TO_UP, STREET_DALLE],
+        [STREET_DALLE, STREET_DALLE, STREET_DALLE, STREET_DALLE, STREET_DALLE, STREET_DALLE, STREET_DALLE, STREET_DALLE, STREET_DALLE, STREET_DALLE]
+    ],
+    map_of_builds: [
+        [BUILD, BUILD, BUILD_GAME, '', '', BUILD, BUILD, '', BUILD, BUILD],
+        [BUILD, '', '', '', '', '', '', '', '', BUILD],
+        [BUILD_GAME, '', '', BUILD, '', BUILD, '', '', '', BUILD],
+        ['', '', BUILD, BUILD, '', BUILD_GAME, '', '', '', BUILD],
+        [BUILD, '', '', '', '', '', '', '', '', BUILD_GAME],
+        [BUILD, '', BUILD, BUILD, '', '', BUILD_GAME, BUILD, '', BUILD],
+        [BUILD, '', BUILD, BUILD, '', BUILD, '', BUILD, '', BUILD],
+        [BUILD_GAME, '', BUILD, BUILD, '', BUILD, '', BUILD, '', BUILD],
+        [BUILD, '', '', '', '', '', '', '', '', BUILD_GAME],
+        [BUILD, BUILD, BUILD, BUILD_GAME, BUILD, BUILD, BUILD, BUILD, BUILD, BUILD]
+    ],
+    map_of_tree: [
+        [0, 3, 0, 0, TREE_1],
+        [0, 3, 0, 1, TREE_1],
+        [0, 3, 0, 2, TREE_2],
+        [0, 3, 0, 3, TREE_1],
+        [0, 3, 1, 0, TREE_1],
+        [0, 3, 2, 0, TREE_1],
+        [0, 3, 3, 0, TREE_2],
+        [0, 3, 3, 1, TREE_1],
+    
+        [0, 4, 0, 0, TREE_2],
+        [0, 4, 0, 1, TREE_1],
+        [0, 4, 0, 2, TREE_2],
+        [0, 4, 0, 3, TREE_1],
+        [0, 4, 1, 3, TREE_1],
+        [0, 4, 2, 3, TREE_1],
+        [0, 4, 3, 3, TREE_1],
+        [0, 4, 3, 2, TREE_2],
+        [0, 4, 3, 1, TREE_1],
+    
+        [2, 6, 0, 0, TREE_1],
+        [2, 6, 0, 1, TREE_2],
+        [2, 6, 0, 2, TREE_1],
+        [2, 6, 1, 0, TREE_2],
+        [2, 6, 1, 1, TREE_1],
+        [2, 6, 2, 0, TREE_2],
+    
+        [2, 7, 0, 1, TREE_1],
+        [2, 7, 0, 2, TREE_1],
+        [2, 7, 0, 3, TREE_2],
+        [2, 7, 2, 1, TREE_1],
+    
+        [3, 6, 1, 0, TREE_1],
+        [3, 6, 2, 0, TREE_2],
+        [3, 6, 3, 0, TREE_1],
+        [3, 6, 3, 1, TREE_1],
+        [3, 6, 3, 2, TREE_1],
+        [3, 6, 3, 3, TREE_2],
+    
+        [3, 7, 3, 0, TREE_1],
+        [3, 7, 3, 1, TREE_1],
+        [3, 7, 2, 2, TREE_2],
+        [3, 7, 1, 3, TREE_1]
+    ]
+};
+
+export const EXPORT_MY_JSON = JSON.stringify(MY_JSON);
