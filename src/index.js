@@ -108,7 +108,7 @@ function preload() {
     this.load.image(BOX, BOX_PATH + BOX + EXTENSION_JPG);
     this.load.image(BONUS, BOX_PATH + BONUS + EXTENSION_JPG);
 
-    this.load.image('human', './../assets/human.png');
+    this.load.image('human', './assets/human.png');
 }
 
 function create() {
